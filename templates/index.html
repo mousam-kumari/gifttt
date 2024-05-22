@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Suggester</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Gift Guru</h1>
+    <form id="giftForm">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" required><br>
+        <label for="occasion">Occasion:</label>
+        <input type="text" id="occasion" name="occasion" required><br>
+        <label for="recipient_type">Recipient Type:</label>
+        <input type="text" id="recipient_type" name="recipient_type" required><br>
+        <label for="categories">Categories:</label>
+        <input type="text" id="categories" name="categories" required><br>
+        <button type="button" onclick="generateGiftIdea()">Generate Gift Idea</button>
+        <input type="text" id="searchInput" name="search" placeholder="Enter your prompt here...">
+        <button type="button" onclick="searchGiftIdea()">Search</button>
+
+    </form>
+    <div id="results"></div>
+</body>
+</html>
